@@ -23,17 +23,18 @@ for (let i = 0; i<8; i++) {
         if (j % 2 === 0) {
             ctx.fillStyle = '#855D3A';
             ctx.fillRect(15 + (squareIndex * 58.75), 15 + (rowIndex * 58.75), 58.75, 58.75);
-            if (rowIndex <= 1 || rowIndex >= 6) {
-                ctx.fillStyle = '#ffffff';
-                drawAnChess();
-            }
+
         } else {
-            ctx.fillStyle = '#E3CBA9';
+            ctx.fillStyle = '#EADDCA';
             ctx.fillRect(15 + (squareIndex * 58.75), 15 + (rowIndex * 58.75), 58.75, 58.75);
-            if (rowIndex <= 1 || rowIndex >= 6) {
-                ctx.fillStyle = '#343434';
-                drawAnChess();
-            }
+        }
+        if (rowIndex <= 1) {
+            ctx.fillStyle = '#ffffff';
+            drawAnChess();
+        }
+        if (rowIndex >= 6) {
+            ctx.fillStyle = '#343434';
+            drawAnChess();
         }
         if (squareIndex === 7) {
             squareIndex = 0
